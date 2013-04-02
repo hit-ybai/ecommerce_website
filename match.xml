@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<map>
+    <membership_levels>
+        <membership_level id="0">&#x666E;&#x901A;&#x4F1A;&#x5458;</membership_level>
+        <membership_level id="1">&#x91D1;&#x5361;&#x4F1A;&#x5458;</membership_level>
+        <membership_level id="2">&#x767D;&#x91D1;&#x4F1A;&#x5458;</membership_level>
+    <membership_level id="3">asd</membership_level></membership_levels>
+    <rooms_info>
+        <room_info id="0">&#x5355;&#x4EBA;&#x95F4;</room_info>
+        <room_info id="1">&#x6807;&#x51C6;&#x95F4;</room_info>
+        <room_info id="2">&#x5927;&#x5E8A;&#x623F;</room_info>
+<room_info id="3">asd</room_info></rooms_info>
+</map>
