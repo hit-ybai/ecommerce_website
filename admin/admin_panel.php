@@ -22,7 +22,7 @@
                 die();
             }
             //连接数据库
-            include("conn.php");
+            include("../include/conn.php");
             $check_query = mysql_query("select * from rooms");
             //用表格显示已有房间信息
             echo "<br><br>";
@@ -40,7 +40,7 @@
                 echo "<td>" . $row['room_number'] . "</td>";
                 echo "<td>" . $row['room_floor'] . "</td>";
                 echo "<td>" . $row['room_price'] . "</td>";
-                include("functions.php");
+                include("../include/functions.php");
                 echo "<td>" . get_room_type_by_id($row['room_type']) . "</td>";
                 echo "<td>";
                 if ($row['room_is_booked'] == 1) {

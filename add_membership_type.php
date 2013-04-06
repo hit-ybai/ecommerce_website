@@ -10,7 +10,6 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-
         $doc = new DOMDocument();
         $doc->load("match.xml");
         $doc->formatoutput = true;

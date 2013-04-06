@@ -11,7 +11,7 @@ and open the template in the editor.
     <body>
         <?php
         //连接数据库
-        include("conn.php");
+        include("include/conn.php");
         //将上一页使用GET方法传送过来的信息存到数据库里
         $sql = "Insert Into rooms (room_number, room_floor, room_price, room_type, room_name, room_area, room_device) Values 
                 ('$_GET[room_number]','$_GET[room_floor]','$_GET[room_price]','$_GET[room_type]', '$_GET[room_name]', '$_GET[room_area]', '$_GET[room_device]')";

@@ -7,12 +7,12 @@
     <body>
         <?php
         //登录
-        session_start();//SESSION相当于一个全局数组，可以用来保存已登录用户的信息
+        session_start(); //SESSION相当于一个全局数组，可以用来保存已登录用户的信息
         //如果已经在SESSION里发现用户登录信息则直接跳转到admin_panel.php 进入管理面板
         if (isset($_SESSION['a_id'])) {
             Header("Location:admin_panel.php");
         }
-        
+
         //这里判断是否提交了表单，下面有说明
         if (isset($_POST['submit'])) {
 
@@ -20,7 +20,7 @@
             $password = $_POST['admin_pin'];
 
             //由于经常连接数据库，所以写在头文件里，用的时候引用
-            include('conn.php');
+            include('../include/conn.php');
             //SQL语句，验证数据库查询检测用户名及密码是否正确
             $check_query = mysql_query("select a_id from admin where admin_name='$username' and password='$password' limit 1");
             //判断数据库是否存在匹配记录

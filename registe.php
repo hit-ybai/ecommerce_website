@@ -4,9 +4,22 @@ and open the template in the editor.
 -->
 <!DOCTYPE html>
 <?php
-    if (isset($_POST['submit']))
-    {
+if (isset($_POST['submit'])) {
+    include ("include/conn.php");
+    $sql = "Insert into users (
+                                user_name ,
+                                password ,
+                                phone_num ,
+                                requirement
+                                )
+                                VALUES (
+                                '$_POST[user_name]',  '$_POST[password]',  '$_POST[phone_num]', '$_POST[requirement]'
+                                )";
+    if (!mysql_query($sql, $conn)) {
+        die('Error: ' . mysql_error());
     }
+    echo "1 record added";
+}
 ?>
 <html>
     <head>
